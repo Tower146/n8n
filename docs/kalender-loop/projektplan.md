@@ -29,10 +29,9 @@ können, ohne davon abhängig zu sein.
 → Zwingt zu einer Technologie, die alle drei aus einer Codebasis bedient.
 → Zwingt Synchronisation früher in den Plan als ursprünglich vorgesehen.
 
-### E4 · Zeitbudget — **[?] offen**
-Gemeint ist: **wieviele Stunden pro Woche** realistisch in die Entwicklung fließen.
-Nur zur Terminrechnung — 5 Stunden gegen 20 Stunden ist der Unterschied zwischen
-etwa 8 Monaten und etwa 2 Jahren bis zur vollen Ausbaustufe.
+### E4 · Zeitbudget — **[E] entschieden**
+**5 Stunden pro Woche oder mehr**, sobald Aktenkrake läuft.
+Aktenkrake hat bis dahin Vorrang. Rechnung dazu in Abschnitt 7.
 
 ### E5 · Was ist die kleinste nützliche Version? — **[E] angepasst**
 Ursprünglich „nur Handy" — verworfen.
@@ -120,6 +119,11 @@ als Nächstes gebaut wird — und zwar aus dem, was in diesen drei Wochen wirkli
 gefehlt hat. Ohne diese Pause entstehen Funktionen nach Bauchgefühl statt nach Bedarf,
 und das Projekt wird nie fertig.
 
+**[E]** Während der Testphase wird eine **Backlog-Liste** geführt. Kritisches wird sofort
+repariert, alles andere gesammelt. Am Ende der drei bis vier Wochen wird die Liste
+durchgesehen — erfahrungsgemäß fällt dabei die Hälfte weg, weil sie sich im Alltag
+als unwichtig herausgestellt hat.
+
 ---
 
 ## 3. Phasenplan mit Toren
@@ -153,7 +157,11 @@ Import und Export.
 Der Sync ist gegenüber der ersten Planung vorgezogen, weil E3 alle drei Geräte fordert.
 Das verlängert Phase 2, spart aber eine spätere Umbauphase.
 
-**Tor 2:** **Drei Wochen tägliche Eigennutzung ohne Weiterentwicklung.**
+**Tor 2:** **Drei bis vier Wochen tägliche Eigennutzung ohne Weiterentwicklung.**
+
+**[E]** Ausnahme: **kritische Fehler werden sofort behoben.** Alles andere —
+jeder Wunsch, jede Idee, jedes Ärgernis — wandert in eine **Backlog-Liste** und wird
+erst am Ende der Testphase bewertet und priorisiert.
 
 ### Phase 3 · Fachmodule (3–6 Monate)
 T7 Zeit und Wege · T8 Vorräte und Gesundheit (inkl. Druckliste EU-Standard) ·
@@ -199,8 +207,77 @@ Bibliotheken, Backups prüfen. Etwa ein halber Tag im Quartal.
 
 ---
 
-## 6. Offen
+## 6. Zeitrechnung bei 5 Stunden pro Woche
 
-- **E4** — Stunden pro Woche
-- Technologiewahl (nach E4, in Phase 0)
+Ehrliche Hochrechnung, damit später keine Enttäuschung entsteht.
+5 Stunden pro Woche sind rund **22 Stunden im Monat**.
+
+| Phase | Aufwand | Dauer bei 5 h/Woche |
+|---|---|---|
+| Phase 0 · Entscheiden und prüfen | 20–30 h | 1–1,5 Monate |
+| Phase 1 · Skelett | 80–120 h | 4–5 Monate |
+| Phase 2 · MVP inkl. Profil-Abgleich | 250–400 h | 12–18 Monate |
+| Phase 3 · Fachmodule | 150–250 h | 7–11 Monate |
+| Phase 4 · KI | 40–80 h | 2–4 Monate |
+
+**Bis zum benutzbaren MVP: rund 1,5 bis 2 Jahre.**
+**Voller Ausbau: 3 Jahre und mehr.**
+
+### Warum das trotzdem in Ordnung sein kann
+Diese Zahlen gelten für klassische Handarbeit. Wird der Code weitgehend KI-gestützt
+geschrieben, verschiebt sich der Engpass: Deine 5 Stunden gehen dann nicht ins Tippen,
+sondern ins **Entscheiden, Prüfen und Ausprobieren**. Realistisch liegt der
+Beschleunigungsfaktor bei zwei bis drei — damit wird aus 1,5–2 Jahren bis zum MVP
+eher **8 bis 12 Monate**.
+
+Diese Beschleunigung gilt aber **nur**, wenn die Entscheidungen vorher stehen.
+Genau dafür ist die jetzige Planungsphase da.
+
+### Drei Stellschrauben, falls es zu lang wird
+1. **Weniger Plattformen im MVP** — Rechner später nachziehen spart geschätzt 3–4 Monate
+2. **Profil-Abgleich später** — spart 3–5 Monate, kostet aber einen Umbau
+3. **Mehr Stunden** — jede zusätzliche Stunde pro Woche verkürzt spürbar
+
+**Empfehlung:** nichts davon vorab ändern. Nach Tor 1 neu bewerten, dann sind die
+Zahlen belastbar statt geschätzt.
+
+---
+
+## 7. Technologievorschlag
+
+Anforderungen, die die Wahl bestimmen: **Handy + Tablet + Windows aus einer Codebasis**,
+**Widgets auf dem Startbildschirm**, **Benachrichtigungen mit Aktionen**,
+**offline voll funktionsfähig**, **verschlüsselte Profilablage**.
+
+### Oberfläche: Flutter
+| Kandidat | Bewertung |
+|---|---|
+| **Flutter** | **Empfehlung.** Deckt Android, iOS und Windows aus einer Codebasis. Ausgereifte Bibliotheken für Benachrichtigungen und Widgets. |
+| React Native | Auf dem Handy stark, unter Windows schwach. |
+| .NET MAUI | Unter Windows stark, kleineres Ökosystem. |
+| Web / PWA / Electron | **Ungeeignet.** Startbildschirm-Widgets praktisch unmöglich, Benachrichtigungen schwach — trifft genau deinen Kernbedarf nicht. |
+
+**Einschränkung, die für jede Wahl gilt:** Startbildschirm-Widgets sind pro System
+immer etwas Eigenes. Ein kleiner nativer Anteil je Plattform ist unvermeidbar.
+
+### Ablage und Abgleich: PocketBase oder Supabase
+- **PocketBase** — eine einzige Programmdatei, sehr einfach zu betreiben, ideal für ein Profil
+- **Supabase** — mehr Möglichkeiten, auch gemietet nutzbar, für spätere Bereitstellung an andere besser gerüstet
+
+**Empfehlung:** **PocketBase** für den Eigenbedarf. Wenn E1 später Richtung „auch für
+andere" kippt, ist der Wechsel auf Supabase überschaubar, sofern das Datenmodell sauber ist.
+
+### Lokale Ablage
+SQLite auf jedem Gerät. Die App arbeitet immer lokal, der Abgleich läuft im Hintergrund.
+Damit ist die Offline-Anforderung baulich erfüllt statt nachträglich angeflanscht.
+
+---
+
+## 8. Offen
+
+- **Wird iOS überhaupt gebraucht?** Deine Geräte wirken nach Android aus.
+  Fällt iOS weg, entfallen die Apple-Gebühren, das Store-Verfahren und die
+  strengsten Benachrichtigungs-Beschränkungen. Das ist die größte
+  Vereinfachungsmöglichkeit, die noch im Raum steht.
+- Technologiewahl endgültig bestätigen (Phase 0)
 - Typenliste für die Symbole (T2)
