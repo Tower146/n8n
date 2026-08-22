@@ -167,8 +167,21 @@ Termine privat · Termine Arbeit · Geburtstage · Haushalt · Medikamente · De
 
 **[V]** Alternative zum Streifen: die **Schriftfarbe** trägt die Kategorie.
 
-**[E]** Symbole/Icons pro Eintrag — gut. **[?]** Ob jede Tätigkeit ein eigenes bekommt.
+### Farbe und Symbol sind zwei Ebenen
+**[E]** Geklärt:
+
+- **Farbe = Kategorie** — privat, beruflich, Termin, To-do, Geburtstag usw.
+- **Symbol = Typ der Tätigkeit**, eine Ebene *unter* der Farbe
+
+Beispiele innerhalb derselben Farbe:
+
+| Typ | Symbol |
+|---|---|
+| Gesprächstermin, telefonisch | Telefon / Hörer / Handy |
+| Abarbeitungstermin (nur abarbeiten) | anderes Symbol |
+
 **[E]** **Symbolbibliothek** wünschenswert.
+**[?]** **Die Typenliste selbst muss noch erarbeitet werden** — welche Tätigkeitstypen es überhaupt gibt.
 
 **[E]** **Balkendiagramm** für die wichtigsten Sachen. Nicht dauerhaft sichtbar, aber jederzeit abrufbar. Farbig, ins Gesamtkonzept passend.
 
@@ -315,10 +328,14 @@ Quellen:
 
 ## 11. Offene Punkte
 
-- **[?]** Ob jede Tätigkeit ein eigenes Symbol bekommt, oder nur die Kategorien
+- **[?]** **Typenliste erarbeiten** — welche Tätigkeitstypen bekommen ein eigenes Symbol (telefonischer Gesprächstermin, Abarbeitungstermin, …)
+
+### Vorgehen
+**[E]** Das Projekt muss in **mehreren Unterkategorien** bearbeitet werden. Das wird nicht so einfach wie das bisher Gesammelte.
 
 ### Inzwischen geklärt
 - Ab wann die Uhr läuft → individuell pro Eintrag (Abschnitt 4)
 - Entscheidung bei Rot → terminieren / abgeben / verschieben, **kein Loslassen** (Abschnitt 4)
 - Hobby / Freizeit → kommt in den Kalender (Abschnitt 5)
+- Symbole → Farbe = Kategorie, Symbol = Typ darunter (Abschnitt 5)
 - Woran Termine scheitern → vier Ursachen (Abschnitt 2)
