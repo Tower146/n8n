@@ -3,6 +3,9 @@
 Stand: 2026-08-22 · Rohnotizen aus der Konzeptphase.
 Status je Punkt: **[E]** entschieden · **[V]** Vorschlag, offen · **[?]** ungeklärt
 
+→ Die Umsetzung ist aufgeteilt in **[projektaufteilung.md](projektaufteilung.md)** (11 Teilprojekte T1–T11).
+Dieses Dokument bleibt die Sammlung der Inhalte, die Aufteilung regelt die Reihenfolge.
+
 ---
 
 ## 1. Was es werden soll
@@ -329,9 +332,17 @@ Quellen:
 ## 11. Offene Punkte
 
 - **[?]** **Typenliste erarbeiten** — welche Tätigkeitstypen bekommen ein eigenes Symbol (telefonischer Gesprächstermin, Abarbeitungstermin, …)
+  → gehört zu **T2** in der Projektaufteilung
+- **[?]** Kategorienliste bestätigen — ist sie mit den 7 Farben vollständig?
+  → ebenfalls **T2**
 
 ### Vorgehen
-**[E]** Das Projekt muss in **mehreren Unterkategorien** bearbeitet werden. Das wird nicht so einfach wie das bisher Gesammelte.
+**[E]** Das Projekt wird in mehreren Unterkategorien bearbeitet — festgehalten in
+**[projektaufteilung.md](projektaufteilung.md)**: 11 Teilprojekte in 5 Gruppen, mit
+Abhängigkeiten und Reihenfolge.
+
+**Nächster Schritt: T2 — Kategorien- und Typenliste.**
+Faustregel: immer nur *ein* Teilprojekt offen.
 
 ### Inzwischen geklärt
 - Ab wann die Uhr läuft → individuell pro Eintrag (Abschnitt 4)
@@ -339,3 +350,4 @@ Quellen:
 - Hobby / Freizeit → kommt in den Kalender (Abschnitt 5)
 - Symbole → Farbe = Kategorie, Symbol = Typ darunter (Abschnitt 5)
 - Woran Termine scheitern → vier Ursachen (Abschnitt 2)
+- Aufteilung des Projekts → [projektaufteilung.md](projektaufteilung.md)
