@@ -36,6 +36,16 @@ Termine, To-dos, Prioritäten, Medikamente, Arbeitszeiten, Haushalt — alles zu
 4. Arbeit und Privat lassen sich nicht künstlich trennen
 5. Verbrauchsgüter (v. a. Medikamente) laufen leer, bevor bestellt wird
 
+### Warum Termine konkret scheitern
+**[E]** Vier verschiedene Ursachen, die aufeinander folgen:
+
+1. **Ich vergesse sie ganz.**
+2. **Ich habe sie im Kopf — bis zu dem Tag, an dem der Termin ist. Dann vergesse ich ihn.**
+3. **Ich muss mich mit einem Termin beschäftigen, damit er sich einprägt.** Reines Eintragen reicht nicht.
+4. **Losgehen fällt schwer** — die Überwindung zum Aufbrechen ist ein eigenes Problem, unabhängig vom Erinnern.
+
+**[E]** Daraus folgt: Der Termin muss **vor Augen sein** und es muss eine **Beschäftigung** mit ihm geben, nicht nur eine Benachrichtigung. Genau dafür ist dieses Projekt da.
+
 ### Feste Rahmenbedingungen
 - Auf Arbeit: feste Termine und Deadlines, nicht verhandelbar
 - Privat: ebenfalls Termine, die eingehalten werden müssen
@@ -117,12 +127,15 @@ Der Unterschied zwischen „ein Buch im Monat" und „ein Buch in zehn Jahren" i
 
 ### Obergrenze
 **[V]** Rot ist Endstation und erzwingt **einmal** eine Entscheidung.
-**[E]** Optionen angepasst zu: **heute terminieren / abgeben / verschieben**
-(„zerlegen" und „loslassen" verworfen — manche Dinge *müssen* gemacht werden, z. B. Fensterputzen. „Loslassen" wäre da unehrlich.)
+**[E]** Optionen: **heute terminieren / abgeben / verschieben**
+
+- **„Zerlegen" entfällt** — geht bei solchen Aufgaben nicht.
+- **„Loslassen" gibt es grundsätzlich nicht.** Es gibt nur *Erledigen*. Die Dinge müssen letztendlich gemacht werden, sonst schaut man irgendwann aus dem Karton nicht mehr raus.
+- (Fensterputzen war nur ein Beispiel für die Liste, kein Sonderfall.)
 
 **[V]** Begrenzte Plätze für persönliche Vorsätze (z. B. 5), damit keine Schuldmaschine entsteht. Haushalt und Termine davon unberührt.
 
-**[?]** Ab wann die Uhr läuft (Anlegen / Fälligkeit / erstes Verschieben) — für dich keine echte Frage, Begründung steht noch aus.
+**[E]** Ab wann die Uhr läuft, wird **individuell pro Eintrag** hinterlegt. Bei regelmäßig wiederkehrenden Dingen ein fester Rhythmus, bei neu angelegten wird es beim Erstellen vordefiniert.
 
 ---
 
@@ -144,7 +157,9 @@ Der Unterschied zwischen „ein Buch im Monat" und „ein Buch in zehn Jahren" i
 - **To-do-Liste** → Farbe / Balken = Dringlichkeit
 
 **[E]** Kategorien mit je eigener Farbe:
-Termine privat · Termine Arbeit · Geburtstage · Haushalt · Medikamente · Deadlines · Hobby/Freizeit **[?]** (ob Hobby überhaupt rein soll, ist offen)
+Termine privat · Termine Arbeit · Geburtstage · Haushalt · Medikamente · Deadlines · Hobby/Freizeit
+
+**[E]** **Hobby/Freizeit kommt mit in den Kalender** — bewusst, um sich einen leichten, gewollten Zeitdruck zu verschaffen.
 
 **[E]** Farbwahl nach Recherche angepasst:
 - **Grundpalette gedämpft** (Kategorien, immer sichtbar) — reduziert die Reizlast
@@ -249,6 +264,15 @@ Diese Woche:  ████████████░░░░  31 / 40 h
 
 **[E]** **KI- / Sprachmodell-Zugang**, um erinnert zu werden.
 
+### Die drei Geräte haben verschiedene Rollen
+**[E]** Das ist kein „läuft überall gleich", sondern drei unterschiedliche Aufgaben:
+
+| Gerät | Rolle |
+|---|---|
+| **Tablet** | Termin **über den Tag präsent halten** — steht sichtbar herum |
+| **Handy** | **Genervt werden.** Vor allem über **Widgets auf dem Startbildschirm** — der Startbildschirm organisiert mit |
+| **Rechner** | **Verwalten.** Hier lässt sich am besten pflegen und ordnen — aber man sitzt nicht ständig davor |
+
 **[V]** Startbildschirm zeigt nur **heute**, und wenig:
 ```
 ┌─────────────────────────┐
@@ -291,8 +315,10 @@ Quellen:
 
 ## 11. Offene Punkte
 
-- **[?]** Ab wann die Uhr läuft — Begründung steht noch aus
-- **[?]** Ob Hobby / Freizeit überhaupt in den Kalender soll
-- **[?]** Ob jede Tätigkeit ein eigenes Symbol bekommt
-- **[?]** Woran Termine konkret scheitern: ganz vergessen, oder bekannt und trotzdem zu spät los
-- **[?]** Zwei abgebrochene Sätze aus dem Diktat: Begründung zur Uhr, und zur Fensterputz-Entscheidung
+- **[?]** Ob jede Tätigkeit ein eigenes Symbol bekommt, oder nur die Kategorien
+
+### Inzwischen geklärt
+- Ab wann die Uhr läuft → individuell pro Eintrag (Abschnitt 4)
+- Entscheidung bei Rot → terminieren / abgeben / verschieben, **kein Loslassen** (Abschnitt 4)
+- Hobby / Freizeit → kommt in den Kalender (Abschnitt 5)
+- Woran Termine scheitern → vier Ursachen (Abschnitt 2)
