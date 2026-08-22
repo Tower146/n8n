@@ -24,8 +24,12 @@ Konsequenz für die Bauweise:
 **Zusätzlich eine Anbindung für den Fall der Fälle** — importieren und exportieren
 können, ohne davon abhängig zu sein.
 
-### E3 · Welches Gerät zuerst? — **[E] entschieden**
+### E3 · Welche Geräte? — **[E] entschieden**
 **Alle drei: Handy, Tablet, Rechner.** Keine Einschränkung auf ein Gerät.
+
+**[E] Kein Apple.** Zielplattformen sind **Android** (Handy und Tablet) und **Windows**.
+Das streicht die Apple-Gebühren, das App-Store-Verfahren und ausgerechnet die
+strengsten Benachrichtigungs-Beschränkungen.
 → Zwingt zu einer Technologie, die alle drei aus einer Codebasis bedient.
 → Zwingt Synchronisation früher in den Plan als ursprünglich vorgesehen.
 
@@ -71,9 +75,14 @@ Handy oder Tablet. Der Rechner (Windows) hat ebenfalls Benachrichtigungen.
 - **Erledigt**
 - mit Bild / Symbol
 
-Das bleibt das größte technische Risiko (Doze-Modus, Batterieoptimierung,
-Widget-Budgets) und wird in Phase 0 geprüft. Dass ein Gerät genügt, entschärft es
-deutlich — fällt eines aus, greifen die anderen.
+**Risiko deutlich gesunken**, seit Apple entfällt:
+- **Android** erlaubt exakte Alarme mit einer eigenen Berechtigung; Doze-Modus und
+  Batterieoptimierung bleiben zu beachten, sind aber lösbar
+- **Windows** hat Benachrichtigungen mit Schaltflächen und Bild — unkompliziert
+
+Offen bleibt die **Windows-Entsprechung zum Widget**: Ein Startbildschirm-Widget wie
+auf Android gibt es dort nicht in gleicher Form. Realistisch wird es ein kleines,
+immer sichtbares Fenster oder ein Eintrag im Infobereich. Wird in S3 geklärt.
 
 ### B3 · Wiederholungsregeln und Zeitumstellung — **[E] Standard verwenden**
 RFC 5545 / RRULE plus erprobte Bibliothek. Nicht selbst erfinden.
@@ -109,7 +118,12 @@ Abfuhrkalender Magdeburg · Bahnverbindungen · Karten für Wegzeiten.
 Alle drei ungeprüft. **Kein Fachmodul darf zur Voraussetzung werden.**
 
 ### B9 · Laufende Kosten
-Ablage/Server für das Profil · Karten-API pro Abfrage · später ggf. Store-Gebühren.
+| Posten | Größenordnung |
+|---|---|
+| ~~Apple Developer Program~~ | **entfällt** — kein Apple |
+| Google Play | ~25 $ einmalig, nur bei Veröffentlichung |
+| Server für das Profil | monatlich, gering bei einem Nutzer |
+| Karten-API | pro Abfrage, Freikontingent begrenzt |
 
 ### B10 · Das Projekt als Ersatzhandlung
 **Gegenmaßnahme (Tor 2), zur Klarstellung:**
@@ -133,9 +147,9 @@ Offen ist nur noch **E4**. Dazu sechs Machbarkeitsprüfungen:
 
 | | Prüfung | klärt |
 |---|---|---|
-| S1 | Erinnerung feuert zuverlässig nach 3 Tagen Ruhe (Android/iOS/Windows) | B2 |
-| S2 | Benachrichtigung mit Aktionen „Schlummern / Erledigt" auf allen drei Systemen | B2 |
-| S3 | Widget aktualisiert sich mehrfach täglich | B2 |
+| S1 | Erinnerung feuert zuverlässig nach 3 Tagen Ruhe (Android + Windows) | B2 |
+| S2 | Benachrichtigung mit Aktionen „Schlummern / Erledigt" auf Android und Windows | B2 |
+| S3 | Android-Widget aktualisiert sich mehrfach täglich; Windows-Entsprechung klären | B2 |
 | S4 | Profil laden und abgleichen über drei Geräte | E6/B5 |
 | S5 | Wiederholung mit Ausnahme über die Zeitumstellung | B3 |
 | S6 | Abfuhrkalender Magdeburg maschinell lesbar? Kosten Wegzeit-Abfrage? | B8/B9 |
@@ -195,7 +209,7 @@ Bibliotheken, Backups prüfen. Etwa ein halber Tag im Quartal.
 
 | # | Risiko | Stand | Gegenmaßnahme |
 |---|---|---|---|
-| R1 | Benachrichtigungen unzuverlässig | **hoch** | S1–S3 in Phase 0; ein Gerät genügt |
+| R1 | Benachrichtigungen unzuverlässig | **mittel** (war hoch) | Apple entfällt; S1–S3 in Phase 0; ein Gerät genügt |
 | R2 | Sync verliert Daten | **mittel** (war hoch) | letzte Änderung gewinnt + Papierkorb + Backup |
 | R3 | Umfang wächst unkontrolliert | **hoch** | feste Tore, ein Teilprojekt |
 | R4 | Projekt wird Ersatzhandlung | **hoch** | Tor 2: drei Wochen nur nutzen |
@@ -252,13 +266,14 @@ Anforderungen, die die Wahl bestimmen: **Handy + Tablet + Windows aus einer Code
 ### Oberfläche: Flutter
 | Kandidat | Bewertung |
 |---|---|
-| **Flutter** | **Empfehlung.** Deckt Android, iOS und Windows aus einer Codebasis. Ausgereifte Bibliotheken für Benachrichtigungen und Widgets. |
+| **Flutter** | **Empfehlung.** Deckt Android und Windows aus einer Codebasis. Ausgereifte Bibliotheken für Benachrichtigungen und Widgets. |
 | React Native | Auf dem Handy stark, unter Windows schwach. |
 | .NET MAUI | Unter Windows stark, kleineres Ökosystem. |
 | Web / PWA / Electron | **Ungeeignet.** Startbildschirm-Widgets praktisch unmöglich, Benachrichtigungen schwach — trifft genau deinen Kernbedarf nicht. |
 
 **Einschränkung, die für jede Wahl gilt:** Startbildschirm-Widgets sind pro System
-immer etwas Eigenes. Ein kleiner nativer Anteil je Plattform ist unvermeidbar.
+immer etwas Eigenes. Ein kleiner nativer Anteil bleibt — jetzt aber nur noch für
+Android und Windows statt für drei Systeme.
 
 ### Ablage und Abgleich: PocketBase oder Supabase
 - **PocketBase** — eine einzige Programmdatei, sehr einfach zu betreiben, ideal für ein Profil
@@ -275,9 +290,9 @@ Damit ist die Offline-Anforderung baulich erfüllt statt nachträglich angeflans
 
 ## 8. Offen
 
-- **Wird iOS überhaupt gebraucht?** Deine Geräte wirken nach Android aus.
-  Fällt iOS weg, entfallen die Apple-Gebühren, das Store-Verfahren und die
-  strengsten Benachrichtigungs-Beschränkungen. Das ist die größte
-  Vereinfachungsmöglichkeit, die noch im Raum steht.
+- Windows-Entsprechung zum Widget (S3 in Phase 0)
 - Technologiewahl endgültig bestätigen (Phase 0)
 - Typenliste für die Symbole (T2)
+
+**Damit sind alle Grundentscheidungen E1–E6 getroffen.**
+Nächster inhaltlicher Schritt: **T2 — Kategorien- und Typenliste.**
